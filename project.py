@@ -55,11 +55,12 @@ if __name__ == '__main__':
 
         if index != -1:
             indexb = index -1
-            while int(data[indexb]['h_in']) == height:
-                print(f"- {data[indexb]['first_name']} {data[indexb]['last_name']}")
-                indexb -= 1
-                if (indexb == 0):
-                    break
+            if (indexb < 0):
+                while int(data[indexb]['h_in']) == height:
+                    print(f"- {data[indexb]['first_name']} {data[indexb]['last_name']}")
+                    indexb -= 1
+                    if (indexb < 0):
+                        break
 
             print(f"- {data[index]['first_name']} {data[index]['last_name']}")
 
